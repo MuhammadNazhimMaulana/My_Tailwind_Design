@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar dengan Tailwind</title>
+
+    <!-- Link tailwind -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Awal Navbar -->
+    <nav class="bg-gray-100">
+        <div class="max-w-5xl mx-auto px-4"> 
+            <div class="flex justify-between">
+                <div class="flex space-x-4">
+                    <!-- Logo -->
+                    <div>
+                        <a href="#" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+                            <img src="img/Bonevian.png" class="h-6 w-6 mr-2">
+                            <span class="font-bold">Bonevian</span>
+                        </a>
+                    </div>
+        
+                    <!-- Primary nav -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="" class="py-4 px-3 text-gray-700 hover:text-gray-900">Fitur</a>
+                        <a href="" class="py-4 px-3 text-gray-700 hover:text-gray-900">Harga</a>
+                    </div>
+                </div>
+    
+                <!-- Secondary Nav -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="" class="py-5 px-3">Login</a>
+                    <a href="" class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300">Register</a>
+                </div>
+
+                <!-- Tombol Mobile -->
+                <div class="mobile-menu-button md:hidden flex items-center">
+                    <button>
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+            <!-- Menu Mobile -->
+            <div class="mobile-menu hidden md:hidden">
+                <a href="" class="block py-2 px-4 text-sm hover:bg-gray-200">Fitur</a>
+                <a href="" class="block py-2 px-4 text-sm hover:bg-gray-200">Harga</a>
+            </div>
+            <!-- Akhir Navbar -->
+    </nav>
+    
+    <!-- Konten Navbar -->
+    <div class="py-32 text-center">
+        <h2 class="font-extrabold text-4xl">Navbar Dengan Tailwind</h2>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
