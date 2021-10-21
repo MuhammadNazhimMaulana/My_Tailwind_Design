@@ -1,3 +1,246 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.container-form {
+  @apply absolute w-full h-full top-0 left-0;
+}
+
+.container {
+  @apply relative w-full min-h-screen bg-transparent overflow-hidden;
+}
+
+.container:before {
+  @apply empty-content absolute w-100 h-100 rounded-half bg-gradient-to-br from-blue-700 to-blue-400 transform -translate-y-1/2 top-0.10 right-0.48 z-6 transition duration-1000 ease-in-out;
+}
+
+form {
+  @apply flex items-center justify-center flex-col col-span-half row-span-half px-0 py-20 overflow-hidden transition duration-200 delay-300 ease-in-out;
+}
+
+.login-register {
+  @apply absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 w-1/2 grid grid-cols-1 z-5 transition duration-1000 delay-700 ease-in-out;
+}
+
+form.login {
+  @apply z-2;
+}
+
+form.register {
+  @apply z-1 opacity-0;
+}
+
+.field-input {
+  @apply max-w-md w-full h-14 grid grid-cols-new px-2 py-0 bg-gray-100 mx-0 mt-10 rounded-4xl;
+}
+
+.field-input i {
+  @apply text-center text-custom leading-extra text-symbol;
+}
+
+.field-input input {
+  @apply bg-transparent outline-none border-none leading-4 font-semibold text-custom;
+}
+
+.field-input input::placeholder {
+  @apply text-cerah font-medium;
+}
+
+.btn {
+  @apply w-37 h-12 border-none outline-none rounded-3.5xl cursor-pointer bg-blue-200 text-white font-semibold mt-3 transition;
+}
+
+.btn:hover {
+  @apply bg-blue-400;
+}
+
+.text-sosial {
+  @apply pt-3 text-sedang;
+}
+
+.media-sosial {
+  @apply flex justify-center;
+}
+
+.ikon-media {
+  @apply h-11.5 w-11.5 border border-gelap mt-0.75 mx-0.75 flex justify-center items-center no-underline text-gelap text-custom rounded-half transition duration-300;
+}
+
+.ikon-media:hover {
+  @apply border border-blue-400 text-blue-400;
+}
+
+.gambar {
+  @apply w-full transition duration-transisi delay-300 ease-in-out;
+}
+
+.kontainer-panel {
+  @apply absolute w-full h-full top-0 left-0 grid grid-cols-2;
+}
+
+.panel {
+  @apply flex flex-col justify-around text-center z-7;
+}
+
+.panel-kiri {
+  @apply p-kiri pointer-events-auto;
+}
+
+.panel-kanan {
+  @apply p-kanan pointer-events-none;
+}
+
+.panel .konten {
+  @apply text-white transition duration-transisi-konten delay-300 ease-in-out;
+}
+
+.panel h3 {
+  @apply font-semibold leading-none text-lumayan;
+}
+
+.panel p {
+  @apply p-panel-p text-kecil;
+}
+
+.btn.transparent {
+  @apply m-0 bg-tidak border-white border-solid border-2 w-thirteen h-fourty-one font-semibold text-smaller;
+}
+
+.panel-kanan .konten,
+.panel-kanan .gambar {
+  @apply transform translate-x-800;
+}
+
+/* Animasi */
+.container.mode-register:before {
+  @apply transform translate-x-full -translate-y-1/2 right-0.52;
+}
+
+.container.mode-register .panel-kiri .gambar,
+.container.mode-register .panel-kiri .konten {
+  @apply transform -translate-x-800;
+}
+
+.container.mode-register .panel-kanan .konten,
+.container.mode-register .panel-kanan .gambar {
+  @apply transform translate-x-0;
+}
+
+.container.mode-register .panel-kiri {
+  @apply pointer-events-none;
+}
+
+.container.mode-register .panel-kanan {
+  @apply pointer-events-auto;
+}
+
+.container.mode-register .login-register {
+  @apply left-1/4;
+}
+
+.container.mode-register form.login {
+  @apply z-1 opacity-0;
+}
+
+.container.mode-register form.register {
+  @apply z-2 opacity-100;
+}
+
+/* Phone */
+@screen md-semi {
+  .container {
+    @apply h-screen min-h-800;
+  }
+
+  .container:before {
+    @apply w-1500 h-1500 left-0.3 bottom-0.6 -translate-x-1/2 right-0.55 top-0.30 transition duration-transisi-lama ease-in-out;
+  }
+
+  .login-register {
+    @apply w-full left-1/2 top-0.95 transform -translate-x-1/2 -translate-y-full transition duration-1000 delay-0.8 ease-in-out;
+  }
+
+  .kontainer-panel {
+    @apply z-10 grid-cols-one grid-rows-row;
+  }
+
+  .panel {
+    @apply flex-row justify-around items-center p-phone;
+  }
+
+  .panel .konten {
+    @apply pr-15 transition duration-transisi-konten delay-0.8 ease-in-out;
+  }
+
+  .panel h3 {
+    @apply text-bigger-custom;
+  }
+
+  .panel p {
+    @apply p-panel-p-new text-small-smaller;
+  }
+
+  .btn.transparent {
+    @apply w-110 h-35-px text-small-smaller;
+  }
+
+  .gambar {
+    @apply w-200 transition duration-transisi-konten delay-0.6 ease-in-out;
+  }
+
+  .panel-kanan {
+    @apply row-span-0.75;
+  }
+
+  .panel-kiri {
+    @apply row-span-half;
+  }
+
+  .panel-kanan .konten,
+  .panel-kanan .gambar {
+    @apply transform translate-y-300;
+  }
+
+  .container.mode-register:before {
+    @apply transform -translate-x-1/2 translate-y-3/4 bottom-0.32;
+  }
+
+  .container.mode-register .panel-kiri .gambar,
+  .container.mode-register .panel-kiri .konten {
+    @apply transform -translate-y-300;
+  }
+
+  .container.mode-register .login-register {
+    @apply top-0.5 transform -translate-x-1/2 -translate-y-0 left-1/2;
+  }
+}
+
+@screen xm {
+  form {
+    @apply p-form;
+  }
+
+  .gambar {
+    @apply hidden;
+  }
+
+  .panel .konten {
+    @apply p-panel-p-baru;
+  }
+
+  .container:before {
+    @apply bottom-0.72 left-1/2;
+  }
+
+  .container.mode-register:before {
+    @apply bottom-0.28 left-1/2;
+  }
+}
+
+.sidebar.hide {
+  @apply w-24 transition-all duration-500 ease-in-out;
+}
+
+.sidebar.hide span {
+  @apply opacity-0;
+}

@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "tailwindcss": "^2.2.16"
+  },
+  "devDependencies": {
+    "tailwindcss-pseudo-elements": "^2.0.0"
   }
 }

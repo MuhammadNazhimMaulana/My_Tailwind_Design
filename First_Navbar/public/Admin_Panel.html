@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <!-- Link Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link Tailwind -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-300 h-full text-gray-600 flex flex-col">
+    <!-- Awal Navbar -->
+    <div class="bg-white h-12 flex items-center justify-between shadow">
+        <div class="px-4 flex">
+            <h1 class="text-gray-800 text-xl mr-5">Test</h1>
+            <button id="admin-btn" class="text-gray-800 text-xl pl-44"><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="flex items-center px-4">
+            <div>Percobaan lainnya</div>
+            <div class="ml-2"><img src="img/Bonevian.png" class="h-8 rounded-full border"></div>
+        </div>
+    </div>
+    <!-- Akhir Navbar -->
+
+    <div class="flex flex-1 min-h-screen">
+        <!-- Sidebar -->
+        <div class="bg-gray-800 p-6 w-64 transition-all duration-500 ease-in-out sidebar">
+            <ul>
+                <li>
+                    <a href="#" class="flex items-center px-4 py-3 rounded hover:bg-gray-900 hover:text-gray-400 bg-gray-900 text-gray-400">
+                        <i class="fas fa-home h-4"></i>
+                        <span class="ml-2">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center px-4 py-3 rounded hover:bg-gray-900 hover:text-gray-400">
+                        <i class="fas fa-address-card"></i>
+                        <span class="ml-2">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center px-4 py-3 rounded hover:bg-gray-900 hover:text-gray-400">
+                        <i class="fas fa-table"></i>
+                        <span class="ml-2">Table</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center px-4 py-3 rounded hover:bg-gray-900 hover:text-gray-400">
+                        <i class="fas fa-file-word"></i>
+                        <span class="ml-2">Documents</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center px-4 py-3 rounded hover:bg-gray-900 hover:text-gray-400">
+                        <i class="fas fa-bookmark"></i>
+                        <span class="ml-2">Mark</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center px-4 py-3 rounded hover:bg-gray-900 hover:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="ml-2">Shield</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center px-4 py-3 rounded hover:bg-gray-900 hover:text-gray-400">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="ml-2">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Konten -->
+        <div class="flex-1">
+            <div class="p-8">
+                <h1 class="text-2l text-gray-800">Judul</h1>
+                <div class="bg-gray-500 h-4 mt-4"></div>
+                <div class="bg-gray-500 h-4 mt-4"></div>
+                <div class="bg-gray-500 h-4 mt-4"></div>
+                <div class="bg-gray-500 h-4 mt-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="admin.js"></script>
+</body>
+</html>
